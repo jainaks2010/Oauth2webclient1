@@ -18,7 +18,7 @@ public class UserPagesController {
     private  CouponResource couponResource;
 
     @GetMapping("/index")
-    public String index(Model model,@AuthenticationPrincipal OidcUser principal){
+    public String index(Model model, @AuthenticationPrincipal OidcUser principal){
         OidcIdToken oidcIdToken = principal.getIdToken();
         String fullName = oidcIdToken.getFullName();
         String email = oidcIdToken.getEmail();
@@ -33,11 +33,5 @@ public class UserPagesController {
         }
         return "users/index";
     }
-
-
-
-
-
-
 
 }
