@@ -1,0 +1,33 @@
+<!DOCTYPE html SYSTEM "http://www.thymeleaf.org/dtd/xhtml1-strict-thymeleaf-4.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:th="http://www.thymeleaf.org">
+
+<head>
+  <meta charset="UTF-8">
+  <title>User Info</title>
+</head>
+<body>
+<h1>User Information Page</h1>
+
+<div>
+  <div><a href="/logout">Logout</a></div>
+</div>
+
+
+<div th:if="${fullName}" style="margin-top: 20px">
+  <b>Full Name :</b> <div  th:text="${fullName}"> </div>
+</div>
+
+<div th:if="${email}">
+  <b>Email  :</b> <div th:text="${email}"></div>
+</div>
+<div th:if="${issuedAt}">
+  <b>Token Issued At :</b> <div th:text="${issuedAt}"></div>
+</div>
+
+<div th:if="${couponStatus}">
+   <b th:text="${couponStatus}"></b>
+</div>
+
+</body>
+</html>
